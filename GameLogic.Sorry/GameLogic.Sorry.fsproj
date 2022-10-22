@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="List.fs" />
+    <Compile Include="Types.fs" />
+    <Compile Include="Board.fs" />
+    <Compile Include="Colors.fs" />
+    <Compile Include="Player.fs" />
+    <Compile Include="Players.fs" />
+    <Compile Include="Card.fs" />
+    <Compile Include="Cards.fs" />
+    <Compile Include="Pawn.fs" />
+    <Compile Include="Location.fs" />
+    <Compile Include="Move.fs" />
+    <Compile Include="Position.fs" />
+    <Compile Include="Positions.fs" />
+    <Compile Include="CardDrawnState.fs" />
+    <Compile Include="GameState.fs" />
+    <Compile Include="Game.fs" />
+  </ItemGroup>
+
+</Project>
