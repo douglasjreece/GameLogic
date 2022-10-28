@@ -14,18 +14,20 @@ module GameState =
                     }
         }
 
-    let ApplyPlay (position: Position option) (state: GameState) =
+    let ApplyPlay (square: Square option) (state: GameState) =
         let player = state.Step.AsPlayerUp.Player
         let nextPositions = 
-            match position with
-            | Some (position') -> 
-                let affectedSquares = Directions.All |> List.collect (fun direction -> Positions.EnclosingSquares position' direction state.Positions)
-                let result = position' :: state.Positions
+            match square with
+            | Some (square') ->
+                let position = Position.Of square' player.Color
+                let affectedSquares = Directions.All |> List.collect (fun direction -> Positions.EnclosingSquares position direction state.Positions)
+                let result = position :: state.Positions
                 let result = result |> Positions.ToColor player.Color affectedSquares |> List.distinct |> List.sortBy (fun position -> position.Square.Y, position.Square.X)
                 result
             | None -> state.Positions
 
-        let nextPotentialPlays = Positions.PotentialPlays nextPositions player.Color.Next
+        let nextColor = player.Color.Next
+        let nextPotentialPlays = Positions.PotentialPlays nextPositions nextColor
         let nextPlayerCanPlay = not nextPotentialPlays.IsEmpty
         let thisPotentialPlays = Positions.PotentialPlays nextPositions player.Color
         let thisPlayerCanPlay = not thisPotentialPlays.IsEmpty
@@ -34,7 +36,6 @@ module GameState =
         let result = 
             match gameOver with
             | false -> 
-                let nextColor = if nextPlayerCanPlay then player.Color.Next else player.Color
                 {
                     Positions = nextPositions
                     Step = PlayerUp (PlayerStep.Of (Player.Of nextColor) nextPotentialPlays)

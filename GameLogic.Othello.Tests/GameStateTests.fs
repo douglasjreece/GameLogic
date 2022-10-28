@@ -17,7 +17,7 @@ type GameStateTestsClass () =
         // act
         let playerUp = state.Step.AsPlayerUp
         let potentialPlays = playerUp.PotentialPlays |> Positions.Sort
-        let play = potentialPlays.Head
+        let play = potentialPlays.Head.Square
         let result = state |> GameState.ApplyPlay (Some play)
 
         // assert
@@ -42,7 +42,7 @@ type GameStateTestsClass () =
         // act
         let playerUp = state.Step.AsPlayerUp
         let potentialPlays = playerUp.PotentialPlays |> Positions.Sort
-        let play = potentialPlays.Head
+        let play = potentialPlays.Head.Square
         let result = state |> GameState.ApplyPlay (Some play)
 
         // assert
@@ -50,7 +50,7 @@ type GameStateTestsClass () =
         let whiteCount = result.Positions |> Positions.ColorCount Color.White
         Assert.AreEqual(14, blackCount)
         Assert.AreEqual(1, whiteCount)
-        Assert.AreEqual(Color.Black, result.Step.AsPlayerUp.Player.Color)
+        Assert.AreEqual(Color.White, result.Step.AsPlayerUp.Player.Color)
 
     [<TestMethod>]
     member this.GameOverWinner () =
@@ -66,7 +66,7 @@ type GameStateTestsClass () =
         // act
         let playerUp = state.Step.AsPlayerUp
         let potentialPlays = playerUp.PotentialPlays |> Positions.Sort
-        let play = potentialPlays.Head
+        let play = potentialPlays.Head.Square
         let result = state |> GameState.ApplyPlay (Some play)
 
         // assert
@@ -91,7 +91,7 @@ type GameStateTestsClass () =
         // act
         let playerUp = state.Step.AsPlayerUp
         let potentialPlays = playerUp.PotentialPlays |> Positions.Sort
-        let play = potentialPlays.Head
+        let play = potentialPlays.Head.Square
         let result = state |> GameState.ApplyPlay (Some play)
 
         // assert

@@ -9,7 +9,7 @@ module Game =
             State = GameState.Initial
         }
 
-    let NextStep (game: Game) (play: Position option) =
+    let NextStep (game: Game) (play: Square option) =
         let nextState = GameState.ApplyPlay play game.State
         { 
             State = nextState 
