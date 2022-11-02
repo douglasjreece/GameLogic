@@ -280,8 +280,8 @@ type PositionsTestsClass () =
 
         // assert
         Assert.AreEqual(2, result.Length)
-        let slideEffectMove = result |> List.first (fun x -> x.Type = MoveType.SideEffect)
-        let slideMove = result |> List.first (fun x -> x.Type = MoveType.Slide)
+        let slideEffectMove = result |> List.find (fun x -> x.Type = MoveType.SideEffect)
+        let slideMove = result |> List.find (fun x -> x.Type = MoveType.Slide)
         Assert.AreEqual(pawn1, slideEffectMove.Pawn)
         Assert.AreEqual(pawn2, slideMove.Pawn)
         Assert.AreEqual(Board.SlideAreas.[0].EndSpot, slideMove.To.Spot)
@@ -308,7 +308,7 @@ type PositionsTestsClass () =
         // assert
         Assert.AreEqual(3, result.Length)
         let slideEffectMoves = result |> List.filter (fun x -> x.Type = MoveType.SideEffect)
-        let slideMove = result |> List.first (fun x -> x.Type = MoveType.Slide)
+        let slideMove = result |> List.find (fun x -> x.Type = MoveType.Slide)
         Assert.AreEqual(2, slideEffectMoves.Length)
         Assert.IsTrue(slideEffectMoves |> List.exists (fun x -> x.Pawn = pawn1))
         Assert.IsTrue(slideEffectMoves |> List.exists (fun x -> x.Pawn = pawn2))
