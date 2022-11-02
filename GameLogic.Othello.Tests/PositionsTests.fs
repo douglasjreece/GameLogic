@@ -3,6 +3,7 @@ namespace GameLogic.Othello.Tests
 open System
 open Microsoft.VisualStudio.TestTools.UnitTesting
 
+open GameLogic.Library
 open GameLogic.Othello
 open GameLogic.Othello.Types
 

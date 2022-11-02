@@ -2,6 +2,7 @@
 
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module Square =
+    open GameLogic.Library
     open Types 
 
     let NeighborY (y: int) (direction: int) =

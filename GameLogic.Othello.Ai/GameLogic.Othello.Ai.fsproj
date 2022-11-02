@@ -6,18 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Types.fs" />
-    <Compile Include="Board.fs" />
-    <Compile Include="Directions.fs" />
-    <Compile Include="Square.fs" />
-    <Compile Include="Squares.fs" />
-    <Compile Include="Positions.fs" />
-    <Compile Include="GameState.fs" />
-    <Compile Include="Game.fs" />
+    <Compile Include="LookAheadStrategy.fs" />
+    <Compile Include="RandomStrategy.fs" />
+    <Compile Include="Library.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GameLogic.Library\GameLogic.Library.fsproj" />
+    <ProjectReference Include="..\GameLogic.Othello\GameLogic.Othello.fsproj" />
   </ItemGroup>
 
 </Project>

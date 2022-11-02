@@ -1,4 +1,4 @@
-﻿namespace GameLogic.Othello
+﻿namespace GameLogic.Library
 
 module List =
     let oneOrEmpty (list: 'a list) = 

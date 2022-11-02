@@ -2,6 +2,8 @@
 
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module CardDrawnState =
+    open GameLogic.Library
+
     let MovesForNumber (color: Color) (number: int) (positions: Positions): MovesList =
         let moves = (Positions.ValidDirectionMoves positions color number)
         let moveAndSideEffects = Positions.MoveAndSideEffects positions

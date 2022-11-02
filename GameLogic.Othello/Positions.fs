@@ -2,6 +2,7 @@
 
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module Positions =
+    open GameLogic.Library
     open Types
 
     let Empty: Position list = []

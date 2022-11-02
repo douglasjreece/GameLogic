@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="List.fs" />
     <Compile Include="Types.fs" />
     <Compile Include="Board.fs" />
     <Compile Include="Colors.fs" />
@@ -22,6 +21,10 @@
     <Compile Include="CardDrawnState.fs" />
     <Compile Include="GameState.fs" />
     <Compile Include="Game.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameLogic.Library\GameLogic.Library.fsproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace GameLogic.Othello
+﻿namespace GameLogic.Othello.Ai
 
 module Say =
     let hello name =

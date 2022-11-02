@@ -1,6 +1,7 @@
 ﻿namespace GameLogic.Othello
 
 module Directions =
+    open GameLogic.Library
     open Types
 
     let YDirections = [Up; Down; Neither]

@@ -3,6 +3,7 @@
 
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 module Squares =
+    open GameLogic.Library
     open Types
 
     let All =

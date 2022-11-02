@@ -41,10 +41,10 @@ module Positions =
         positions |> List.map (fun position -> position.Location)
 
     let AtLocation (location: Location) (positions: Positions) =
-        positions |> List.first (fun position -> position.Location = location)
+        positions |> List.find (fun position -> position.Location = location)
 
     let ForPawn (pawn: Pawn) (positions: Positions) =
-        positions |> List.first (fun position -> position.Pawn = pawn)
+        positions |> List.find (fun position -> position.Pawn = pawn)
 
     let ValidForwardMoves (positions: Positions) (color: Color) (count: int) =
         let playerPositions = positions |> ForPawnColor color |> OnBoard

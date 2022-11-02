@@ -13,7 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Othello", "Othello", "{D163
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "GameLogic.Othello", "GameLogic.Othello\GameLogic.Othello.fsproj", "{6E5CF51F-EB00-468C-B0EC-AD0F4A4A32B7}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GameLogic.Othello.Tests", "GameLogic.Othello.Tests\GameLogic.Othello.Tests.fsproj", "{D65F2206-AA58-483A-AC8F-EB38A25ACE39}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "GameLogic.Othello.Tests", "GameLogic.Othello.Tests\GameLogic.Othello.Tests.fsproj", "{D65F2206-AA58-483A-AC8F-EB38A25ACE39}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GameLogic.Othello.Ai", "GameLogic.Othello.Ai\GameLogic.Othello.Ai.fsproj", "{D21C1469-DEA6-498B-B733-E9E254108226}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GameLogic.Library", "GameLogic.Library\GameLogic.Library.fsproj", "{5D888A7E-1E90-45D8-8C59-002AEFC61D6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{D65F2206-AA58-483A-AC8F-EB38A25ACE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D65F2206-AA58-483A-AC8F-EB38A25ACE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D65F2206-AA58-483A-AC8F-EB38A25ACE39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21C1469-DEA6-498B-B733-E9E254108226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21C1469-DEA6-498B-B733-E9E254108226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21C1469-DEA6-498B-B733-E9E254108226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21C1469-DEA6-498B-B733-E9E254108226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D888A7E-1E90-45D8-8C59-002AEFC61D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D888A7E-1E90-45D8-8C59-002AEFC61D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D888A7E-1E90-45D8-8C59-002AEFC61D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D888A7E-1E90-45D8-8C59-002AEFC61D6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,7 @@ Global
 		{817FD37E-61C1-4070-AE1D-D34E700D5978} = {F3399406-B69B-4BE1-AD1E-C2385D4D5DB1}
 		{6E5CF51F-EB00-468C-B0EC-AD0F4A4A32B7} = {D1631708-0DAB-45B9-B148-EE290D482362}
 		{D65F2206-AA58-483A-AC8F-EB38A25ACE39} = {D1631708-0DAB-45B9-B148-EE290D482362}
+		{D21C1469-DEA6-498B-B733-E9E254108226} = {D1631708-0DAB-45B9-B148-EE290D482362}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B146A53F-538A-44BC-B9FB-F96404CEF4EE}
