@@ -41,7 +41,7 @@ module CardDrawnState =
                 let movesAux (move: Move) =
                     let positionsAux = positions |> Positions.ApplyMove move
                     let movesAux = Positions.ValidForwardMoves positionsAux color count2
-                    let result = movesAux |> List.filter (fun move -> move.Pawn <> move.Pawn)
+                    let result = movesAux |> List.filter (fun move' -> move'.Pawn <> move.Pawn)
                     result
                 moves1 |> List.collect (fun x -> movesAux x)
             let combinedMovesDups = moves1 |> List.cartesian moves2
