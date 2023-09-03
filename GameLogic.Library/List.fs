@@ -9,7 +9,20 @@ module List =
     let cartesian xs ys = 
         xs |> List.collect (fun x -> ys |> List.map (fun y -> x, y))
 
-    let any (pred: 'a -> bool) (list: 'a list) = list |> List.filter (fun x -> pred x) |> List.length > 0
+    let collectAll (list: 'a list list) =
+        list |> List.collect (fun x -> x)
+
+    let any (pred: 'a -> bool) (list: 'a list) =
+        list |> List.fold (fun acc x -> acc || pred x) false
+
+    let all (pred: 'a -> bool) (list: 'a list) =
+        list |> List.fold (fun acc x -> acc && pred x) (not list.IsEmpty)
+
+    let headOrNone (list: 'a list): 'a option =
+        if list.IsEmpty then None else Some list.Head
+
+    let lastOrNone (list: 'a list): 'a option =
+        if list.IsEmpty then None else Some list.[list.Length-1]
 
     let findOrNone (pred: 'a -> bool) (list: 'a list) = 
         let rec aux ls =

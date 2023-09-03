@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Color.fs" />
+    <Compile Include="Piece.fs" />
+    <Compile Include="Location.fs" />
+    <Compile Include="Position.fs" />
+    <Compile Include="Move.fs" />
+    <Compile Include="State.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameLogic.Library\GameLogic.Library.fsproj" />
+  </ItemGroup>
+
+</Project>
